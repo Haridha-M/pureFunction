@@ -13,6 +13,12 @@ console.log(a.map(e=>e.name.toUpperCase()));
     b.map(e=>{count[e]=(count[e]||0)+1});
     console.log(count)
 
+//numbers of occurance of string
+    const c="hihello";
+    const Count={}
+    str=c.split('')
+    str.map((e)=>{Count[e]=(Count[e]||0)+1})
+    console.log(Count)
 
 
 
