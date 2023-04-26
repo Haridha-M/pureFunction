@@ -32,14 +32,9 @@ const ar=[{
     price:2500,
     address:'chennai'
 }]
-obj={}
-ar.filter(e=>{
-    if(!(e.price in obj)){
-        obj[e.price]=[]
-    }    
-    obj[e.price].push(e)
-    })
-    console.log("Output 2:",obj);
+maxPrice=3000;
+console.log("Output 2:",ar.filter(e=>e.price<maxPrice))
+
 //greater String
 function filterByLength(len,b){
     return len.filter(str=>str.length>b)
@@ -53,96 +48,76 @@ console.log("Output 3:",result)
 const arra=[{
     name:'hari',
     age:18,
-    std:12,
-    grade:'B',
+    category:12,
+    grades:[65,70,80],
     email:'aukdc@gmail.com',
     date:12,
-    hobbies:'drawing',
+    hobbies:['drawing','singing'],
     address:'chennai'
 },
 {
     name:'ram',
     age:18,
-    std:12,
-    grade:'A',
+    category:12,
+    grades:[60,30,80],
     email:'aukdc@gmail.com',
     date:11,
-    hobbies:'playing',
+    hobbies:['playing','painting'],
     address:'chennai'
 },
 {
     name:'priya',
     age:17,
-    std:11,
-    grade:'B',
+    category:11,
+    grades:[60,70,50],
     email:'stucore@gmail.com',
     date:12,
-    hobbies:'drawing',
+    hobbies:['drawing','dancing'],
     address:'chennai'
 },
 {
     name:'raj',
     age:16,
-    std:10,
-    grade:'A',
+    category:10,
+    grades:[60,70,80],
     email:'stucore@gmail.com',
     date:11,
-    hobbies:'singing',
+    hobbies:['singing','drawing'],
     address:'chennai'
 }]
-obj={}
-obj1={}
-obj2={}
-obj3={}
-obj4={}
-obj5={}
+//filter by category property
+cat=arra.filter((obj,index,self)=>self.findIndex((t)=>(t.category===obj.category))===index).map(obj=>obj.category);
+    console.log("Output 4:",cat);
 
-arra.filter(e=>{
-    if(!(e.std in obj5)){
-        obj5[e.std]=[]
-    }    
-    obj5[e.std].push(e)
-    })
-    console.log("Output 4:",obj5);
-arra.filter(e=>{
-    if(!(e.age in obj)){
-        obj[e.age]=[]
-    }    
-    obj[e.age].push(e)
-    })
-    console.log("Output 5:",obj);
+//filter by age property
+    minAge=16;
+    console.log("Output 5:",arra.filter(e=>e.age>minAge));
 
-arra.filter(e=>{
-    if(!(e.hobbies in obj1)){
-        obj1[e.hobbies]=[]
-    }    
-    obj1[e.hobbies].push(e)
-    })
-    console.log("Output 6:",obj1);
+//filter by hobbies
+function Filter(hobby,arra){
+return arra.filter(e=>e.hobbies.includes(hobby));
+}
+console.log("Output 6:",Filter('singing',arra))
 
-arra.filter(e=>{
-    if(!(e.grade in obj2)){
-        obj2[e.grade]=[]
-    }    
-    obj2[e.grade].push(e)
-    })
-    console.log("Output 7:",obj2);
+//filter by average grade
+grade=80;
+console.log((ar,grade)=>ar.filter((e)=>e.grades.reduce((a,b)=>a+b)/e.grades.length>grade))
 
-arra.filter(e=>{
-    if(!(e.date in obj3)){
-        obj3[e.date]=[]
-    }    
-    obj3[e.date].push(e)
-    })
-    console.log("Output 8:",obj3);
+// arra.filter(e=>{
+//     if(!(e.date in obj3)){
+//         obj3[e.date]=[]
+//     }    
+//     obj3[e.date].push(e)
+//     })
+//     console.log("Output 8:",obj3);
 
-arra.filter(e=>{
-    if(!(e.email in obj4)){
-        obj4[e.email]=[]
-    }    
-    obj4[e.email].push(e)
-    })
-    console.log("Output 9:",obj4);
+// arra.filter(e=>{
+//     if(!(e.email in obj4)){
+//         obj4[e.email]=[]
+//     }    
+//     obj4[e.email].push(e)
+//     })
+//     console.log("Output 9:",obj4);
 
 //palindrome
 pal=['racecar','world','life','level']
