@@ -1,5 +1,6 @@
 // even number
 arr=[1,2,3,4,5,6,7,8,9,10]
+// console.log("Output 1:",arr.filter(e=>e%2!=1))
 console.log("Output 1:",arr.filter(e=>e%2!=1))
 
 //property of price
