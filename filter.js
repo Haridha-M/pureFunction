@@ -50,8 +50,8 @@ const arra=[{
     age:18,
     category:12,
     grades:[65,70,80],
-    email:'aukdc@gmail.com',
-    date:12,
+    email:['aukdc@gmail.com','finstein.ai'],
+    date:'09-03-2023',
     hobbies:['drawing','singing'],
     address:'chennai'
 },
@@ -60,8 +60,8 @@ const arra=[{
     age:18,
     category:12,
     grades:[60,30,80],
-    email:'aukdc@gmail.com',
-    date:11,
+    email:['aukdc@gmail.com','finstein.ai'],
+    date:'11-03-2023',
     hobbies:['playing','painting'],
     address:'chennai'
 },
@@ -70,8 +70,8 @@ const arra=[{
     age:17,
     category:11,
     grades:[60,70,50],
-    email:'stucore@gmail.com',
-    date:12,
+    email:['stucore@gmail.com'],
+    date:'12-03-2023',
     hobbies:['drawing','dancing'],
     address:'chennai'
 },
@@ -80,8 +80,8 @@ const arra=[{
     age:16,
     category:10,
     grades:[60,70,80],
-    email:'stucore@gmail.com',
-    date:11,
+    email:['stucore@gmail.com'],
+    date:'14-03-2023',
     hobbies:['singing','drawing'],
     address:'chennai'
 }]
@@ -98,28 +98,3 @@ function Filter(hobby,arra){
 return arra.filter(e=>e.hobbies.includes(hobby));
 }
 console.log("Output 6:",Filter('singing',arra))
-
-//filter by average grade
-grade=80;
-console.log((ar,grade)=>ar.filter((e)=>e.grades.reduce((a,b)=>a+b)/e.grades.length>grade))
-
-// arra.filter(e=>{
-//     if(!(e.date in obj3)){
-//         obj3[e.date]=[]
-//     }    
-//     obj3[e.date].push(e)
-//     })
-//     console.log("Output 8:",obj3);
-
-// arra.filter(e=>{
-//     if(!(e.email in obj4)){
-//         obj4[e.email]=[]
-//     }    
-//     obj4[e.email].push(e)
-//     })
-//     console.log("Output 9:",obj4);
-
-//palindrome
-pal=['racecar','world','life','level']
-palindrome=pal.filter(str=>str===str.split('').reverse().join(''));
-console.log("Output 10:",palindrome)
