@@ -1,5 +1,5 @@
 
-//category by date
+//8.Write a function that takes an array of objects with a dateproperty and returns a new array with only the objects where the date is within a given range. Use the filtermethod to accomplish this.
 const array=[{
     name:'hari',
     age:18,
@@ -23,7 +23,7 @@ const array=[{
     
 startDate=new Date('2023-03-11')
 endDate=new Date('2023-03-14')
-// //method 1
+//method 1
 // items={};
 //  array.filter(e=>{
 //         objDate=new Date(e.date);
@@ -40,4 +40,4 @@ function fil(array,startDate,endDate){
     });
 }
     DateRange=fil(array,startDate,endDate)
-    console.log("Output 7:",DateRange)
+    console.log("Output 8:",DateRange)

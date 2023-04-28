@@ -1,4 +1,4 @@
-//category filter the grade
+//c7.Write a function that takes an array of objects with a nameand gradesproperty and returns a new array with only the objects where the average grade is greater than a given amount. Use the filtermethod to accomplish this
 const range=[{
     name:'hari',
     grade:75,
@@ -24,7 +24,7 @@ range.filter(e=>{
      if(e.grade>=80 && e.grade<=90){ studentgrade['greaterthan 80%',e.name]=e}
 })
 console.log("Output 8:",studentgrade);
-//category by mail
+//9.Write a function that takes an array of objects with a nameand emailproperty and returns a new array with only the objects where the email address includes a given domain. Use the filtermethod to accomplish this
 const array=[{
     name:'hari',
     age:18,
@@ -50,7 +50,7 @@ function Filter(mail,array){
     }
     console.log("Output 9:",Filter('finstein.ai',array))
 
-//palindrome
+//10.Write a function that takes an array of strings and returns a new array with only the strings that are palindromes. Use the filtermethod to accomplish this.
 pal=['racecar','world','life','level']
 palindrome=pal.filter(str=>str===str.split('').reverse().join(''));
 console.log("Output 10:",palindrome)

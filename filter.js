@@ -1,9 +1,9 @@
-// even number
+// 1.Write a function that takes an array of numbers and returns a new array with only the even numbers. Use the filtermethod to accomplish this.
 arr=[1,2,3,4,5,6,7,8,9,10]
 // console.log("Output 1:",arr.filter(e=>e%2!=1))
 console.log("Output 1:",arr.filter(e=>e%2!=1))
 
-//property of price
+//2.Write a function that takes an array of objects with a priceproperty and returns a new array with only the objects that have a price less than a given amount. Use the filtermethod to accomplish this.
 const ar=[{
     name:'hari',
     age:18,
@@ -35,7 +35,7 @@ const ar=[{
 maxPrice=3000;
 console.log("Output 2:",ar.filter(e=>e.price<maxPrice))
 
-//greater String
+//3.Write a function that takes an array of strings and returns a new array with only the strings that have a length greater than a given amount. Use the filtermethod to accomplish this.
 function filterByLength(len,b){
     return len.filter(str=>str.length>b)
 }
@@ -44,7 +44,7 @@ b=3
 result=filterByLength(len,b)
 console.log("Output 3:",result)
 
-//category of a key
+//4.Write a function that takes an array of objects with a categoryproperty and returns a new array with only the unique categories. Use the filterand mapmethods to accomplish this.
 const arra=[{
     name:'hari',
     age:18,
@@ -85,15 +85,15 @@ const arra=[{
     hobbies:['singing','drawing'],
     address:'chennai'
 }]
-//filter by category property
+//4.Write a function that takes an array of objects with a categoryproperty and returns a new array with only the unique categories. Use the filterand mapmethods to accomplish this.
 cat=arra.filter((obj,index,self)=>self.findIndex((t)=>(t.category===obj.category))===index).map(obj=>obj.category);
     console.log("Output 4:",cat);
 
-//filter by age property
+//5.Writea function that takes an array of objects with a nameand ageproperty and returns a new array with only the objects where the age is greater than a given amount. Use the filtermethod to accomplish this.
     minAge=16;
     console.log("Output 5:",arra.filter(e=>e.age>minAge));
 
-//filter by hobbies
+//6.Write a function that takes an array of objects with a nameand hobbiesproperty and returns a new array with only the objects where the hobbies include a given hobby. Use the filtermethod to accomplish this
 function Filter(hobby,arra){
 return arra.filter(e=>e.hobbies.includes(hobby));
 }
